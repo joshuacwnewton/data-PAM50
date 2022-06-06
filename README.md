@@ -2,63 +2,6 @@
 
 Part of [`spinalcordtoolbox`](https://github.com/spinalcordtoolbox).
 
-
-## Using the Template
-
-1. Make a [new repo](https://github.com/new) using this as its template.
-
-    Name it `spinalcordtoolbox/data-PAM50` where `${dataset_name}` is something usefully descriptive:
-
-    ![data-template-new](./.data-template-new.png)
-
-2. Download the new repo
-    
-    ```bash
-    git clone git@github.com:spinalcordtoolbox/data-PAM50.git
-    cd data-PAM50
-    ```
-    
-3. Fill with initial metadata
-    
-    ```bash
-    # 1. Find and replace ${dataset-name} with the name you picked (e.g. `supercats`)
-    perl -pi -e 's/\PAM50/supercats/' README.md
-    perl -pi -e 's/\PAM50/supercats/' setup.py
-   
-    # 2. Rename the repo's `dataset` folder to match the repo name
-    git mv src/spinalcordtoolbox/data/dataset src/spinalcordtoolbox/data/PAM50
-   
-    # 3. Commit the changes 
-    git add -u
-    git commit -m "Setting data-PAM50 package metadata"
-    git push
-    ```
-    
-4. Fill with initial data and upload
-    
-    ```bash
-    # 1. Copy over the data files to the dataset folder in this repo
-    cp ${data_files} src/spinalcordtoolbox/data/PAM50
-   
-    # 2. Add, commit, and push the newly-added files
-    git add .
-    git commit -m "Copy over data files to dataset folder"
-    git push
-    ```
-
-5. Remove the "Using this template" section from `README.md`, since it is now no longer needed.
-
-    ```bash
-    # Delete the 'Using the Template' section from `README.md`
-    vi README.md
-   
-    # Add, commit, and push the changes
-    git add README.md
-    git commit -m "Removing template section from README.md"
-    git push
-    ```
-
-
 ## How to update this dataset
 
 1. Edit and commit the files in `src/spinalcordtoolbox/data/`
