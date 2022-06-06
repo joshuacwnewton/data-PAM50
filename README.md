@@ -1,4 +1,4 @@
-# `data-${dataset_name}`
+# `data-PAM50`
 
 Part of [`spinalcordtoolbox`](https://github.com/spinalcordtoolbox).
 
@@ -7,30 +7,30 @@ Part of [`spinalcordtoolbox`](https://github.com/spinalcordtoolbox).
 
 1. Make a [new repo](https://github.com/new) using this as its template.
 
-    Name it `spinalcordtoolbox/data-${dataset_name}` where `${dataset_name}` is something usefully descriptive:
+    Name it `spinalcordtoolbox/data-PAM50` where `${dataset_name}` is something usefully descriptive:
 
     ![data-template-new](./.data-template-new.png)
 
 2. Download the new repo
     
     ```bash
-    git clone git@github.com:spinalcordtoolbox/data-${dataset_name}.git
-    cd data-${dataset_name}
+    git clone git@github.com:spinalcordtoolbox/data-PAM50.git
+    cd data-PAM50
     ```
     
 3. Fill with initial metadata
     
     ```bash
     # 1. Find and replace ${dataset-name} with the name you picked (e.g. `supercats`)
-    perl -pi -e 's/\${dataset_name}/supercats/' README.md
-    perl -pi -e 's/\${dataset_name}/supercats/' setup.py
+    perl -pi -e 's/\PAM50/supercats/' README.md
+    perl -pi -e 's/\PAM50/supercats/' setup.py
    
     # 2. Rename the repo's `dataset` folder to match the repo name
-    git mv src/spinalcordtoolbox/data/dataset src/spinalcordtoolbox/data/${dataset_name}
+    git mv src/spinalcordtoolbox/data/dataset src/spinalcordtoolbox/data/PAM50
    
     # 3. Commit the changes 
     git add -u
-    git commit -m "Setting data-${dataset_name} package metadata"
+    git commit -m "Setting data-PAM50 package metadata"
     git push
     ```
     
@@ -38,7 +38,7 @@ Part of [`spinalcordtoolbox`](https://github.com/spinalcordtoolbox).
     
     ```bash
     # 1. Copy over the data files to the dataset folder in this repo
-    cp ${data_files} src/spinalcordtoolbox/data/${dataset_name}
+    cp ${data_files} src/spinalcordtoolbox/data/PAM50
    
     # 2. Add, commit, and push the newly-added files
     git add .
@@ -62,7 +62,7 @@ Part of [`spinalcordtoolbox`](https://github.com/spinalcordtoolbox).
 ## How to update this dataset
 
 1. Edit and commit the files in `src/spinalcordtoolbox/data/`
-2. Go to https://github.com/spinalcordtoolbox/data-${dataset_name}/releases
+2. Go to https://github.com/spinalcordtoolbox/data-PAM50/releases
 3. Click "Draft Release"
 4. Fill in a version tag. We recommend using date-based releases (e.g. `2020.1.1`, `2022.5.18`, etc.). 
 
@@ -70,8 +70,8 @@ Part of [`spinalcordtoolbox`](https://github.com/spinalcordtoolbox).
 
 5. Click "Publish Release"
 6. Wait a few minutes;
-7. Monitor the progress at https://github.com/spinalcordtoolbox/data-${dataset_name}/actions/workflows/release.yml
-8. The release should appear on https://github.com/spinalcordtoolbox/data-${dataset_name}/releases
+7. Monitor the progress at https://github.com/spinalcordtoolbox/data-PAM50/actions/workflows/release.yml
+8. The release should appear on https://github.com/spinalcordtoolbox/data-PAM50/releases
    with the .tar.gz (sdist) and .whl (wheel) formats attached momentarily.
 
 
@@ -96,7 +96,7 @@ python -m build --wheel --sdist
 
 # Install the generated wheel. 
 # As a result, the contents of ./src/ will be installed to:
-#   ./venv/lib/python3.7/site-packages/spinalcordtoolbox/data/${dataset_name}
+#   ./venv/lib/python3.7/site-packages/spinalcordtoolbox/data/PAM50
 # This means that the installed data package will coexist alongside the
 # installed `spinalcordtoolbox` pip package.
 pip install dist/*.whl

@@ -8,7 +8,7 @@ here = pathlib.Path(__file__).parent.resolve()
 import site; site.ENABLE_USER_SITE = True
 
 setup(
-  name='spinalcordtoolbox-data-${dataset_name}',
+  name='spinalcordtoolbox-data-PAM50',
   version="dev",
   description='Part of https://github.com/neuropoly/spinalcordtoolbox',
   long_description=(here / 'README.md').read_text(encoding='utf-8'),
@@ -17,7 +17,7 @@ setup(
   author_email='pip@neuropoly.org',
   url='https://spinalcordtoolbox.com/',
   project_urls={
-      'Source': 'https://github.com/spinalcordtoolbox/data-${dataset_name}',
+      'Source': 'https://github.com/spinalcordtoolbox/data-PAM50',
       'Documentation': 'https://spinalcordtoolbox.com/',
   },
   license='CC-BY-4.0',
